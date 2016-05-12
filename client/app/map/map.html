@@ -1,0 +1,46 @@
+<span>
+    <md-toolbar style="height: 70px;">
+      <div class="md-toolbar-tools" layout-wrap>
+        <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+        <h3><span>Fit Focus App</span></h3>
+        <span flex></span>
+        <md-button href="/main">Dashboard</md-button>
+        <md-button href="/forum">Forum</md-button>
+        <md-button href="/posts">Top Classes</md-button>
+        <md-button ng-controller="ShellCtrl" href="/login" ng-click="logout()">
+          <md-icon md-svg-icon="action:exit_to_app"></md-icon>
+          Logout
+        </md-button>
+      </div>
+    </md-toolbar>
+<md-content layout-padding ng-controller="MapController">
+  <md-input-container>
+    <label>Directions</label>
+    <input ng-model="view.addressInput" ng-model-options="{debounce: 1000}" ng-change="findAddress()"/>
+  </md-input-container>
+  <div layout="row">
+    <md-input-container flex="99">
+      <label>Available Locations</label>
+      <md-select ng-model="view.selectedPlace" ng-disabled="view.places.length < 2"
+                 ng-change="centralLocation()">
+        <md-option ng-repeat="place in view.places" value="{{place.place_id}}">{{place.formatted_address}}
+        </md-option>
+      </md-select>
+    </md-input-container>
+    <md-button class="md-icon-button">
+      <md-icon aria-label="delete" md-svg-icon="action:delete" ng-click="findMarkers()"
+               ng-disabled="view.markers.length === 0"
+               md-delay="1500" md-autohide="true"></md-icon>
+    </md-button>
+  </div>
+</md-content>
+<div id="map" class="map"></div>
+<script type="text/ng-template" id="icons_24x24.svg">
+  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <g id="white_delete">
+      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+      <path d="M0 0h24v24H0z" fill="none"/>
+    </g>
+  </svg>
+</script>
+</span>

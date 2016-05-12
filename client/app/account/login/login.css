@@ -1,0 +1,41 @@
+.login-card, .register-card {
+  max-width: 350px;
+  margin: 0 auto;
+}
+
+.love-message {
+  margin-top: 64px;
+  text-align: center;
+}
+
+.btn-small {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-bottom: 0;
+  font-size: 100;
+  line-height: 60%;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #ff9900;
+  color: #fafafa;
+  background-color: #ff9900;
+  background-size: 18px 18px;
+  min-width: 28px;
+  min-height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #ff9900;
+}

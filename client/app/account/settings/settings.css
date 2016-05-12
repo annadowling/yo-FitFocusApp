@@ -1,0 +1,26 @@
+fieldset {
+  margin: 30px 0;
+}
+
+.md-content {
+  background-color: #eee;
+}
+
+.md-content{
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.md-card {
+  background-color: #fff;
+}
+
+.md-card h2:first-of-type {
+  margin-top: 0;
+}
+
+.md-card{
+  height: 100%;
+}

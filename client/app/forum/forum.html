@@ -1,0 +1,53 @@
+<span>
+    <md-toolbar style="height: 70px;">
+      <div class="md-toolbar-tools" layout-wrap layout="row">
+        <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+        <span> </span>
+        <h3>
+          Fit Focus App
+        </h3>
+        <span flex></span>
+        <md-button href="/main">Dashboard</md-button>
+        <md-button href="/posts">Top Classes</md-button>
+        <md-button href="/map">Class Location</md-button>
+        <md-button ng-controller="ShellCtrl" href="/login" ng-click="logout()">
+          <md-icon md-svg-icon="action:exit_to_app"></md-icon>
+          Logout</md-button>
+      </div>
+    </md-toolbar>
+    <md-content layout-padding>
+      <md-card flex-gt-sm="50" flex-gt-md="100">
+        <md-card-content layout-margin="layout-margin" layout-padding="layout-padding">
+          <div layout="column" layout-align="start center" layout-sm="=column" layout-wrap>
+            <h2>Forum Messages</h2>
+            <br>
+            <md-list class="md-whiteframe-2dp">
+              <md-list-item ng-repeat="forumMessage in forum" class="md-2-line">
+                <div layout="column" class="md-list-item-text">
+                  <h3 ng-bind="forumMessage.name"></h3>
+                  <p ng-bind="forumMessage.message"></p>
+                  <md-icon md-svg-icon="action:delete" ng-click="" class="material-icons">delete
+                  </md-icon>
+                </div>
+              </md-list-item>
+            </md-list>
+          </div>
+          <div layout="column" layout-align="start center">
+            <h2>Add Your Message</h2>
+            <form layout="column" ng-controller="ShellCtrl">
+              <md-input-container>
+                <input type="text" name="newForum.name" value="{{ getCurrentUser().name }}" readonly>
+              </md-input-container>
+              <md-input-container>
+                <label>Message</label>
+                <textarea rows="3" ng-model="newForum.message"></textarea>
+              </md-input-container>
+              <div layout="row" layout-align="center">
+                <button type="submit" class="btn" ng-click="addForum()">Add</button>
+              </div>
+            </form>
+          </div>
+        </md-card-content>
+      </md-card>
+      </md-content>
+    </span>

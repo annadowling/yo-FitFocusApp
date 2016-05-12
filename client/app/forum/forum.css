@@ -1,0 +1,70 @@
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+  font-size: 400;
+  line-height: 140%;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: #ff9900;
+  color: #fafafa;
+  background-color: #ff9900;
+  background-size: 18px 18px;
+  min-width: 28px;
+  min-height: 28px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.btn:hover {
+  background-color: #ff9900;
+}
+
+md-content.md-default-theme {
+  background-color: #eee;
+}
+
+md-content.md-dashboard{
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+md-card {
+  background-color: #fff;
+}
+
+md-card h2:first-of-type {
+  margin-top: 0;
+}
+
+md-card.md-card-dashboard{
+  height: 100%;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 40px;
+  text-align: center;
+  position: relative;
+  opacity: .95;
+  border-radius: 4px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, .25);
+}

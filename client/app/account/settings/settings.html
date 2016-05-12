@@ -1,0 +1,81 @@
+<md-toolbar style="height: 70px;">
+  <div class="md-toolbar-tools" layout-wrap>
+    <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+    <h3><span>Fit Focus App</span></h3>
+    <span flex></span>
+    <md-button href="/main">Dashboard</md-button>
+    <md-button href="/forum">Forum</md-button>
+    <md-button href="/posts">Top Classes</md-button>
+    <md-button ng-controller="ShellCtrl" href="/login" ng-click="logout()">Logout</md-button>
+  </div>
+</md-toolbar>
+<span>
+<md-content layout-padding>
+  <md-card flex-gt-sm="100" flex-gt-md="150">
+    <md-card-content layout-margin="layout-margin" layout-padding="layout-padding">
+      <div layout="column" layout-align="start center" layout-sm="=column" layout-wrap>
+        <div class="container" layout-fill style="height: 100%" ng-controller="ShellCtrl">
+          <div class="col-sm-12">
+            <h2>User Details</h2>
+          </div>
+          <fieldset>
+            <label><b>Name:</b> {{ getCurrentUser().name }}</label>
+          </fieldset>
+          <fieldset>
+            <label><b>Email:</b> {{ getCurrentUser().email }}</label>
+          </fieldset>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+</md-content>
+  </span>
+
+<span>
+<md-content layout-padding>
+  <md-card flex-gt-sm="100" flex-gt-md="150">
+    <md-card-content layout-margin="layout-margin" layout-padding="layout-padding">
+      <div layout="column" layout-align="start center" layout-sm="=column" layout-wrap>
+        <div class="container" layout-fill style="height: 100%">
+          <div class="row">
+            <div class="col-sm-12">
+              <h2>Change Password</h2>
+            </div>
+            <div class="col-sm-12">
+              <form class="form" name="form" ng-submit="changePassword(form)" novalidate>
+                <fieldset>
+                  <label><i>Old Password:</i></label>
+                  <div class="form-group">
+                    <input type="password" name="password" class="form-control" ng-model="user.oldPassword"
+                           mongoose-error layout-fill style="height: 100%"/>
+                    <p class="help-block" ng-show="form.password.$error.mongoose">
+                      {{ errors.other }}
+                    </p>
+                  </div>
+                  <br>
+                  <label><i>New Password:</i></label>
+                  <div class="form-group">
+
+                    <input type="password" name="newPassword" class="form-control" ng-model="user.newPassword"
+                           ng-minlength="3"
+                           required layout-fill style="height: 100%"/>
+                    <p class="help-block"
+                       ng-show="(form.newPassword.$error.minlength || form.newPassword.$error.required) && (form.newPassword.$dirty || submitted)">
+                      Password must be at least 3 characters.
+                    </p>
+                  </div>
+                </fieldset>
+
+                <p class="help-block"> {{ message }} </p>
+
+                <button class="btn btn-lg btn-primary" type="submit">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </md-card-content>
+  </md-card>
+</md-content>
+  </span>
+

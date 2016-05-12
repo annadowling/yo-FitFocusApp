@@ -1,0 +1,40 @@
+<md-toolbar style="height: 70px;">
+  <div class="md-toolbar-tools" layout-wrap>
+    <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+    <h3><span>Fit Focus App</span></h3>
+    <span flex></span>
+  </div>
+</md-toolbar>
+<div style="text-align: center;">
+  <h2><b>Welcome to Fit Focus</b></h2>
+</div>
+<md-content class="md-padding">
+  <md-card class="login-card">
+    <md-card-content>
+      <h3 class="md-title">Login</h3>
+
+      <form name="form" ng-submit="login(form)" novalidate>
+        <md-input-container>
+          <label>Email</label>
+          <input required type="email" name="email" ng-model="user.email">
+          <div ng-messages="form.email.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <label>Password</label>
+          <input required type="password" name="password" ng-model="user.password">
+          <div ng-messages="form.password.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+        <div layout="row">
+          <md-button class="btn-small" type="submit">Login</md-button>
+          <md-button class="btn-small" flex type="submit" href="/signup">Sign Up</md-button>
+        </div>
+      </form>
+    </md-card-content>
+  </md-card>
+</md-content>
+
+

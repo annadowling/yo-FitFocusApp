@@ -1,0 +1,100 @@
+<div layout="column" class="relative" layout-fill role="main" layout-wrap>
+  <md-button class="md-fab md-fab-bottom-right" aria-label="Add" ng-click="showAdd($event)">
+    <md-icon md-svg-icon="content:add"></md-icon>
+  </md-button>
+  <md-toolbar style="height: 90px;">
+    <div class="md-toolbar-tools" layout="row" layout-wrap>
+      <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+      <h3><span>Fit Focus App</span></h3>
+      <span flex></span>
+      <md-button href="/main">Dashboard</md-button>
+      <md-button href="/forum">Forum</md-button>
+      <md-button href="/map">Class Location</md-button>
+      <md-button href="/login" ng-click="logout()">
+        <md-icon md-svg-icon="action:exit_to_app"></md-icon>
+        Logout
+      </md-button>
+    </div>
+    <md-tabs md-stretch-tabs class="md-primary" md-selected="data.selectedIndex">
+      <md-tab id="tab1" aria-controls="tab1-content">
+        Latest
+      </md-tab>
+      <md-tab id="tab2" aria-controls="tab2-content">
+        Top Rated
+      </md-tab>
+    </md-tabs>
+  </md-toolbar>
+  <md-content flex md-scroll-y>
+    <ui-view layout="column" layout-fill layout-padding>
+      <div class="inset" hide-sm></div>
+      <ng-switch on="data.selectedIndex" class="tabpanel-container">
+        <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()"
+             md-swipe-right="previous()" layout="row" layout-align="center center" layout-wrap>
+          <md-card flex-gt-sm="90" flex-gt-md="80">
+            <md-card-content>
+              <h2>Latest Rated Classes</h2>
+              <md-list>
+                <md-item ng-repeat="post in posts | orderBy:'-date'">
+                  <md-item-content>
+                    <div class="md-tile-content">
+                      <md-icon class="avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"
+                               style="width: 100px; height: 100px;"></md-icon>
+                      <md-icon md-svg-icon="action:grade" ng-click="incrementUpvotes(post)"></md-icon>
+                      {{post.upvotes}}
+                      <h3>{{post.title}}</h3>
+                      <h4>{{post.username}}</h4>
+                      <h4>{{post.date | date:'dd/MM/yyyy'}}</h4>
+                      <p>
+                        <a ng-show="post.link != null" href="{{post.link}}">Visit Page</a>
+                      </p>
+                      <p>
+                        <a href="#/bookClass">Book a Class</a>
+                      </p>
+                    </div>
+                  </md-item-content>
+                  <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                  <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                </md-item>
+                <md-divider></md-divider>
+              </md-list>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()"
+             md-swipe-right="previous()" layout="row" layout-align="center center">
+          <md-card flex-gt-sm="90" flex-gt-md="80">
+            <md-card-content>
+              <h2>Top Rated</h2>
+              <md-list>
+                <md-item ng-repeat="post in posts | orderBy:'-upvotes'">
+                  <md-item-content>
+                    <div class="md-tile-content">
+                      <md-icon class="avatar-icon" md-svg-icon="avatar:svg-{{ ($index + 1) % 11 }}"
+                               style="width: 100px; height: 100px;"></md-icon>
+                      <md-icon md-svg-icon="action:grade" ng-click="incrementUpvotes(post)"></md-icon>
+                      {{post.upvotes}}
+                      <h3>{{post.title}}</h3>
+                      <h4>{{post.username}}</h4>
+                      <h4>{{post.date | date:'dd/MM/yyyy'}}</h4>
+                      <p>
+                        <a ng-show="post.link != null" href="{{post.link}}">Visit Page</a>
+                      </p>
+                      <p>
+                        <a href="#/bookClass">Book a Class</a>
+                      </p>
+                    </div>
+                  </md-item-content>
+                  <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
+                  <md-divider hide-gt-sm ng-if="!$last"></md-divider>
+                </md-item>
+                <md-divider></md-divider>
+              </md-list>
+            </md-card-content>
+          </md-card>
+        </div>
+
+      </ng-switch>
+
+    </ui-view>
+  </md-content>
+</div>
