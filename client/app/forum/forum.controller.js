@@ -1,8 +1,8 @@
 'use strict';
-
 angular.module('yoFitFocusApp')
   .controller('ForumCtrl', ['$scope','ForumService',
     function($scope,ForumService) {
+      $scope.newForum = { };
       ForumService.getForums()
         .success(function(forum) {
           $scope.forum = forum;
@@ -16,7 +16,6 @@ angular.module('yoFitFocusApp')
         ForumService.addForum(forum)
           .success(function(added_forum) {
             $scope.forum.push(added_forum);
-            $scope.newForum = { }
           });
       }
     }]);
