@@ -6,6 +6,8 @@
 ###Overview.
 This application is called Fit Focus. The concept of this application is to provide a facility for a user to find and/or rate fitness classes in their area,
 in order to find a class which suits their needs.
+
+The applications uses yeomna as its package manager which then integrates the use of mongo, express, angular-material and node.js as its core technologies.
 The main aim of this application is to provide a way in which users can create a community for rating fitness classes. This is something which was inspired by
 a lack of ratings on individual classes provided in my own area, which I was searching for online when trying to decide on classes to attend.
 After attending classes which I did not enjoy and did not suit my needs, I thought that there may be a need for an application of this kind, to aid the decision making process for 
