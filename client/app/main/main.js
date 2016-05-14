@@ -23,5 +23,9 @@ angular.module('yoFitFocusApp')
         templateUrl: 'app/forum/forum.html',
         controller: 'ForumCtrl',
         authenticate: true
-      });
+      }).when('/bookclass', {
+      templateUrl: 'app/bookclass/bookclass.html',
+      controller: 'BookclassCtrl',
+      authenticate: true
+    });
   });

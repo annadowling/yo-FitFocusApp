@@ -12,7 +12,8 @@
         <md-button href="/map">Class Location</md-button>
         <md-button ng-controller="ShellCtrl" href="/login" ng-click="logout()">
           <md-icon md-svg-icon="action:exit_to_app"></md-icon>
-          Logout</md-button>
+          Logout
+        </md-button>
       </div>
     </md-toolbar>
     <md-content layout-padding>
@@ -26,8 +27,6 @@
                 <div layout="column" class="md-list-item-text">
                   <h3 ng-bind="forumMessage.name"></h3>
                   <p ng-bind="forumMessage.message"></p>
-                  <!--<md-icon md-svg-icon="action:delete" ng-click="delete(forumMessage)" class="material-icons">delete-->
-                  <!--</md-icon>-->
                 </div>
               </md-list-item>
             </md-list>
@@ -35,9 +34,8 @@
           <div layout="column" layout-align="start center">
             <h2>Add Your Message</h2>
             <form layout="column" ng-controller="ShellCtrl">
-                <md-input-container>
-                  <!--<label>User</label>-->
-                  <input type="text" ng-model="newForum.name" ng-init="newForum.name= getCurrentUser().name" readonly/>
+              <md-input-container>
+                <input type="text" ng-model="newForum.name" ng-init="newForum.name= getCurrentUser().name" readonly/>
               </md-input-container>
               <md-input-container>
                 <label>Message</label>
@@ -50,5 +48,5 @@
           </div>
         </md-card-content>
       </md-card>
-      </md-content>
+    </md-content>
     </span>

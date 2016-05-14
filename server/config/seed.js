@@ -9,6 +9,7 @@ var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
 var Post = require('../api/post/post.model');
 var Forum = require('../api/forum/forum.model');
+var BookClass = require('../api/bookClass/bookClass.model');
 
 Thing.find({}).remove(function () {
   Thing.create({
@@ -29,9 +30,42 @@ Thing.find({}).remove(function () {
     {
       name: 'Map',
       info: 'Find locations near to you.'
-    },{
+    }, {
       name: 'Community',
       info: 'Grow a community of quality fitness ratings to get the best out of your gym.'
+    });
+});
+
+BookClass.find({}).remove(function () {
+  BookClass.create({
+      day: 'Monday',
+      time: '9:00am',
+      booked: false
+    },
+    {
+      day: 'Tuesday',
+      time: '11:00am',
+      booked: false
+    },
+    {
+      day: 'Wednesday',
+      time: '9:00am',
+      booked: false
+    },
+    {
+      day: 'Thursday',
+      time: '11:00am',
+      booked: false
+    },
+    {
+      day: 'Friday',
+      time: '9:00am',
+      booked: false
+    },
+    {
+      day: 'Saturday',
+      time: '11:00am',
+      booked: false
     });
 });
 

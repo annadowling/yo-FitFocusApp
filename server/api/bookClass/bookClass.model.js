@@ -4,9 +4,9 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var BookClassSchema = new Schema({
-  name: String,
-  info: String,
-  active: Boolean
+  day: String,
+  time: String,
+  booked: Boolean
 });
 
-module.exports = mongoose.model('BookClass', BookClassSchema);
+module.exports = mongoose.model('bookClass', BookClassSchema);
