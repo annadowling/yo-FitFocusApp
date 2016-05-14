@@ -109,7 +109,6 @@ A simple diagram showing the app's component design, in particular controllers a
 <b>User Settings Page</b>
 ![][image10]
 <br>
-<br>
 <b>Admin Settings Page</b>
 ![][image8]
 <br>
