@@ -9,4 +9,4 @@ var BookClassSchema = new Schema({
   booked: Boolean
 });
 
-module.exports = mongoose.model('bookClass', BookClassSchema);
+module.exports = mongoose.model('BookClass', BookClassSchema);

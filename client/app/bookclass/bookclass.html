@@ -1,0 +1,42 @@
+<md-toolbar style="height: 70px;">
+  <div class="md-toolbar-tools" layout-wrap layout="row">
+    <md-icon md-svg-src='./svg/heart-beats.svg'></md-icon>
+    <span> </span>
+    <h3>
+      Fit Focus App
+    </h3>
+    <span flex></span>
+    <md-button href="/forum">Forum</md-button>
+    <md-button href="/posts">Top Classes</md-button>
+    <md-button href="/map">Class Location</md-button>
+    <md-button ng-controller="ShellCtrl" href="/login" ng-click="logout()">
+      <md-icon md-svg-icon="action:exit_to_app"></md-icon>
+      Logout
+    </md-button>
+  </div>
+</md-toolbar>
+<div id="wrapper" layout-wrap layout="row">
+  <div class="container" ng-controller="BookclassCtrl" layout-wrap>
+    <div align="center">
+      <h1>Book a Class</h1>
+    </div>
+    <div class="row times" layout="row" layout-wrap>
+      <div class="col-xs-4" align="center" ng-repeat="slot in bookClass" style="display: inline-block; width: 30%;
+  padding-top: 5%; margin-bottom: 5%;" layout="row" layout-wrap>
+        <h3 ng-bind="slot.day"></h3>
+        <div class="time-slot" layout-wrap>
+          <input type="checkbox" id="{{ slot.day }}-{{ $index }}" ng-model="slot.booked" ng-click="update(slot)">
+          <br>
+          <label for="{{ slot.day }}-{{ $index }}">
+            {{ slot.time }}
+          <span flex ng-if="slot.booked">Class Full</span>
+          <span flex ng-if="!slot.booked">Spaces Available</span>
+            </label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
