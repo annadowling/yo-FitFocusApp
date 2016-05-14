@@ -29,11 +29,9 @@ module.exports = function(app) {
   app.use(cookieParser());
   app.use(passport.initialize());
   if ('production' === env) {
-    //app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
-    app.use(express.static(path.join(config.root, 'client')));
-    app.set('appPath', path.join(config.root, 'client'));
-    //app.use(express.static(path.join(config.root, 'public')));
-    //app.set('appPath', path.join(config.root, 'public'));
+    app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
+    app.use(express.static(path.join(config.root, 'public')));
+    app.set('appPath', path.join(config.root, 'public'));
     app.use(morgan('dev'));
   }
 
