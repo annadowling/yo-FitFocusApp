@@ -8,5 +8,5 @@ module.exports = {
     uri: 'mongodb://localhost/yofitfocusapp-dev'
   },
 
-  seedDB: true
+  seedDB: false
 };
