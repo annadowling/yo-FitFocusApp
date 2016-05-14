@@ -112,6 +112,9 @@ A simple diagram showing the app's component design, in particular controllers a
 <b>Admin Settings Page</b>
 ![][image8]
 <br>
+<b>Login Page</b>
+![][image11]
+<br>
     
 
 ### Routing
@@ -155,5 +158,6 @@ If the user then tries to access an internal login page after logging out, they 
 [image8]: ./admisettingsview.png
 [image9]: ./accessAccountSettingsviews.png
 [image10]: ./usersettingsview.png
+[image11]: ./login.png
 
 
