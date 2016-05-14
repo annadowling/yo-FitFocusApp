@@ -82,7 +82,6 @@
     "node": "4.2.4"
   },
   "scripts": {
-    "postinstall": "grunt uglify",
     "start": "node server/app.js",
     "test": "grunt test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
