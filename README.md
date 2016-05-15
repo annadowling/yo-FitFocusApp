@@ -22,7 +22,7 @@ This is called generator-angular-material-fullstack.
 
 Fit Focus provides a class ranking facility for adding posts and upvoting classes which the user wants to vote for.
 This posts page can be viewed based on date added and also based on top rated classes. The user can click on the plus icon on the right hand side of the screen in order to add a class rating post
-to the list. This then gets added to the list of posts when the user clicks post. i fthey wish to cancel adding their post, they can press the esc button on the keyboard, which will hide the dialog pop up.
+to the list. This then gets added to the list of posts when the user clicks post. If they wish to cancel adding their post, they can press the esc button on the keyboard, which will hide the dialog pop up.
 
 This page also provides a link to a class booking facility, which allows the user to select a class time slot from the GUI interface. These time slots are currently hard-coded and are not stored,
 with the intention of having these selections stored in the database for the second assignment. When the user clicks on a time slot the class the button then changes from green to red and displays
@@ -36,7 +36,7 @@ This then returns location suggestions to the user which can be selected in the 
 Once a location is selected the map will fly to that address. The map can be viewed as satellite theme or terrain theme and includes markers and the drop in user for street view.
 The map also has zoom functionality.
 
-As of the second assigment the application now also contains an admin section for deleting users, which is tied to an admin account role. There is also a user settings page
+As of the second assignment the application now also contains an admin section for deleting users, which is tied to an admin account role. There is also a user settings page
 in which the user can now update their account password.
 
 ### List of user features (excluding user registration and authentication)
@@ -142,13 +142,14 @@ A simple diagram showing the app's component design, in particular controllers a
 
 ###Extra features
 The application contains functionality to register and authenticate a user.
-It also contains facilities whereby a user can change their password. If a user has the administrative role then they can delete users from the admin page, as demonstarted in the above screenshot
+It also contains facilities whereby a user can change their password. If a user has the administrative role then they can delete users from the admin page, as demonstrated in the above screenshot
 for the Admin Settings Page.
 
 This information is stored using mongodb as of the second assignment. This stores the users name, email and password upon registration to the application via the registration view.
-Once the user has registered they can then login via the login view. The application cannot be accessed without user registration and login. If a user trys to access internal pages without logging in
+Once the user has registered they can then login via the login view. The application cannot be accessed without user registration and login. If a user tries to access internal pages without logging in
 they will be redirected to the login view. Logout functionality is also in place on each page. Once the user clicks the logout button they are re-directed to the user login view.
 If the user then tries to access an internal login page after logging out, they will be denied access and redirected to the login view to prompt them to log in.
+
 
 ### Independent learning
 
