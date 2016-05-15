@@ -1,4 +1,4 @@
-# Assignment 2 - MEAN app using Yeoman package manager.
+# Assignment 2 - MEAN Stack App using Yeoman package manager.
 
 + Name: Anna Dowling
 + Student Number: 08453713
@@ -7,7 +7,7 @@
 This application is called Fit Focus. The concept of this application is to provide a facility for a user to find and/or rate fitness classes in their area,
 in order to find a class which suits their needs.
 
-The applications uses yeomna as its package manager which then integrates the use of mongo, express, angular-material and node.js as its core technologies.
+The applications uses yeoman as its package manager which then integrates the use of mongo, express, angular-material and node.js as its core technologies.
 The main aim of this application is to provide a way in which users can create a community for rating fitness classes. This is something which was inspired by
 a lack of ratings on individual classes provided in my own area, which I was searching for online when trying to decide on classes to attend.
 After attending classes which I did not enjoy and did not suit my needs, I thought that there may be a need for an application of this kind, to aid the decision making process for 
@@ -36,7 +36,7 @@ This then returns location suggestions to the user which can be selected in the 
 Once a location is selected the map will fly to that address. The map can be viewed as satellite theme or terrain theme and includes markers and the drop in user for street view.
 The map also has zoom functionality.
 
-As of the second assignent the application now also contains an admin section for deleting users, which is tied to an admin account role. There is also a user settings page
+As of the second assigment the application now also contains an admin section for deleting users, which is tied to an admin account role. There is also a user settings page
 in which the user can now update their account password.
 
 ### List of user features (excluding user registration and authentication)
@@ -92,8 +92,10 @@ A simple diagram showing the app's component design, in particular controllers a
 <b>Dashboard Greeting Page</b>
 ![][image3]
 <br>
+<br>
 <b>Top Classes Page</b>
 ![][image4]
+<br>
 <br>
 <b>Forum Page</b>
 ![][image5]
@@ -102,20 +104,26 @@ A simple diagram showing the app's component design, in particular controllers a
 <b>Class Location Page</b>
 ![][image6]
 <br>
+<br>
 <b>Book Class Page</b>
 ![][image7]
+<br>
 <br>
 <b>Access User and Admin Settings Pages</b>
 ![][image9]
 <br>
+<br>
 <b>User Settings Page</b>
 ![][image10]
+<br>
 <br>
 <b>Admin Settings Page</b>
 ![][image8]
 <br>
+<br>
 <b>Login Page</b>
 ![][image11]
+<br>
 <br>
     
 
@@ -157,7 +165,7 @@ If the user then tries to access an internal login page after logging out, they 
 [image5]: ./forumview.png
 [image6]: ./mapview.png
 [image7]: ./bookclassview.png
-[image8]: ./admisettingsview.png
+[image8]: ./adminsettingsview.png
 [image9]: ./accessAccountSettingsviews.png
 [image10]: ./usersettingsview.png
 [image11]: ./login.png
