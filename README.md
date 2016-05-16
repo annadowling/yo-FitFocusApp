@@ -140,6 +140,42 @@ A simple diagram showing the app's component design, in particular controllers a
 + /settings - client/app/account/settings/settings.html
 + redirectTo - /login - client/app/account/login/login.html
 
+### Web API endpoint reference:
+### bookClass:
++ GET /api/bookClass return a list of classes
++ POST /api/bookClass', bookClass_id - update a class
++ POST /api/bookClass/' + bookClass_id + '/booked' - update the boolean booked for a class
++ GET /api/bookClass/' + bookClass_id - get a specific class
+   
+### forum:
++ GET /api/forums - get a list of forums
++ POST /api/forums', forum - update a forum
++ GET '/api/forums/' + forum_id - get a specific forum
+   
+### post:
++ GET '/api/posts' - get a list of posts
++ POST '/api/posts',post - add a post
++ POST '/api/posts/' + post_id + '/upvotes',{upvotes: new_upvote_count } - update the upvote count of a post
++ GET - '/api/posts/' + post_id - get a specific post
+   
+   
+### user:
++ GET ('/', auth.hasRole('admin'), controller.index); - get all regsitered users if the user logged in is an admin user
++ DELETE ('/:id', auth.hasRole('admin'), controller.destroy); - delete user if the person deleting the user has the admin role
++ GET ('/me', auth.isAuthenticated(), controller.me); - get the authenticated user
++ PUT ('/:id/password', auth.isAuthenticated(), controller.changePassword); - get the authenticated users password
++ GET ('/:id', auth.isAuthenticated(), controller.show); display the authenticated user
++ POST ('/', controller.create); - create a new user
+   
+### map:
++ GET ('/', controller.index); - get the map
++ GET ('/:id', controller.show); - get a particular map id
++ POST ('/', controller.create); - create a map
++ PUT ('/:id', controller.update); - update the map
++ PATCH ('/:id', controller.update); - update the map
++ DELETE ('/:id', controller.destroy); - delete the map
+
+
 ###Extra features
 The application contains functionality to register and authenticate a user.
 It also contains facilities whereby a user can change their password. If a user has the administrative role then they can delete users from the admin page, as demonstrated in the above screenshot
